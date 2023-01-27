@@ -17,11 +17,26 @@ public class main implements secure{
         System.out.println(input.length());
         char arr[] = new char[input.length()];
         int binaryArr[] = new int[input.length()];
-        char txt = ' ';
+        String txt;
+        
         for(int i = 0;i<input.length();i++){
             arr[i] = input.charAt(i);
-            binaryArr[i] = Integer.toBinaryString(arr[i]);
-            System.out.print(Integer.toBinaryString(arr[i]));
+            txt = Integer.toBinaryString(arr[i]);
+            binaryArr[i] = Integer.parseInt(txt);
+        }
+        for(int i = 0;i<input.length();i++)
+        {
+            System.out.print(binaryArr[i]);
+        }
+        int i = 0;
+        int t = 0;
+        char[] alphabet = {'a','b','c','d','e'};
+        while(i<binaryArr.length){
+            for()
+            {
+
+            }
+            i++;
         }
         
     }
