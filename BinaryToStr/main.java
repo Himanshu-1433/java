@@ -16,13 +16,14 @@ public class main implements secure{
         String input =  input();
         System.out.println(input.length());
         char arr[] = new char[input.length()];
+        int binaryArr[] = new int[input.length()];
+        char txt = ' ';
         for(int i = 0;i<input.length();i++){
             arr[i] = input.charAt(i);
+            binaryArr[i] = Integer.toBinaryString(arr[i]);
+            System.out.print(Integer.toBinaryString(arr[i]));
         }
-        for(int i = 0;i<arr.length;i++)
-        {
-            System.out.print(Integer.toBinaryString(arr[i])+" ");
-        }
+        
     }
     
     public static void main(String[] args)
