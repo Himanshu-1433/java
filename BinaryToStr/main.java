@@ -1,9 +1,10 @@
+
 import java.util.*;
 interface secure {
     public void convert();
     public String input();
 }
-public class main implements secure{
+public class Main implements secure{
     @Override
     public String input() {
         Scanner User_input = new Scanner(System.in);
@@ -14,61 +15,38 @@ public class main implements secure{
     @Override
     public void convert() {
         String input =  input();
-        // System.out.println(input.length());
-        char arr[] = new char[input.length()];
+        char StringTochar[] = new char[input.length()];
         int binaryArr[] = new int[input.length()];
-        String txt;
+        String CharToBinary;
         
         for(int i = 0;i<input.length();i++){
-            arr[i] = input.charAt(i);
-            txt = Integer.toBinaryString(arr[i]);
-            binaryArr[i] = Integer.parseInt(txt);
-            // System.out.println(binaryArr[i]);
+            StringTochar[i] = input.charAt(i);
+            CharToBinary = Integer.toBinaryString(StringTochar[i]);
+            binaryArr[i] = Integer.parseInt(CharToBinary);
         }
-
-        // for(int i = 0;i<input.length();i++)
-        // {
-        //     System.out.print(binaryArr[i]);
-        // }
-        
         int one = 0;
-        int zero = 0;
-        char[] alphabet = {'a','b','c','d','e'};
+        char[] alphabet = {'a','b','c','d','e','f','g'};
         for(int i = 0; i<input.length();i++){
-         int num = binaryArr[i];
-         for(int j = 0;j<=5;j++)
+        int num = binaryArr[i];
+         for(int j = 0;j<=6;j++)
          {
-                
-                
-                System.out.println(num);
-                // if(num == 100000)
-                // {
-                //         // System.out.print("one = " + num);
-                //     one++;
-                // }
-                // else if (num == 000000){
-                //     // System.out.print("Zero =" + num);
-                //     zero++;
-                // }
-                
+                int reminder = num %10;
+                num = num / 10;
+                if(reminder == 1)
+                {
+                     one++;
+                }
             }
-            System.out.println();
-            System.out.println(binaryArr[i]);
-            System.out.println(one);
-            System.out.println(zero);
+            System.out.print(alphabet[one-1]);
             one = 0;
-            zero = 0;
      }
 
     }
     
     public static void main(String[] args)
     {
-        main obj = new main();
+        Main obj = new Main();
         obj.convert();
 
     }
 }
-
-
-
