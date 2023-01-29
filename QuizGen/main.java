@@ -120,13 +120,11 @@ public class main
         int Options = input.nextInt();
         String QOArr[][] = new String[Questions][Options+2];
         char[] OptionsAlphabet = {'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g'};
-        for(int i = 0; i < Questions; i++){
-            for(int j = 0; j <= Options+1; j++){
-                if(j < 1){
-                    System.out.println("Enter Question");
-                    QOArr[i][0] = " (Question) " + input.nextLine();
-                }
-                else if(j>=1 && j <= Options){
+        for(int i = 1; i <=Questions; i++){
+            System.out.println("Enter Question");
+            QOArr[i-1][0] = " (Question) " + input.nextLine();
+            for(int j = 1; j <= Options+1; j++){
+                if(j>=1 && j <= Options){
                     System.out.println("Enter Option for ("+OptionsAlphabet[j-1]+")");
                     QOArr[i][j] = " ("+OptionsAlphabet[j-1]+") " + input.nextLine();
                 }
