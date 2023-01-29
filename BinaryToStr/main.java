@@ -4,7 +4,7 @@ interface secure {
     public void convert();
     public String input();
 }
-public class Main implements secure{
+public class main implements secure{
     @Override
     public String input() {
         Scanner User_input = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class Main implements secure{
     
     public static void main(String[] args)
     {
-        Main obj = new Main();
+        main obj = new main();
         obj.convert();
 
     } 
